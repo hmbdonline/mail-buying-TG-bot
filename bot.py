@@ -18,9 +18,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Get bot token from environment variable
-BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-MAIN_ADMIN_USERNAME = "@s00s22"
+# ============================================
+# CONFIGURATION - Add your bot token here
+# ============================================
+BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Replace with your actual bot token
+MAIN_ADMIN_USERNAME = "@s00s22"     # Replace with your Telegram username
+# ============================================
 
 # Initialize database
 def init_database():
@@ -299,8 +302,9 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     """Start the bot"""
-    if not BOT_TOKEN:
-        logger.error("TELEGRAM_BOT_TOKEN environment variable not set!")
+    if not BOT_TOKEN or BOT_TOKEN == "YOUR_BOT_TOKEN_HERE":
+        logger.error("Please set your BOT_TOKEN in the bot.py file!")
+        logger.error("Replace 'YOUR_BOT_TOKEN_HERE' with your actual bot token")
         return
     
     # Initialize database
