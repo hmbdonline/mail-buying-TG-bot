@@ -1,0 +1,14 @@
+# Telegram Bot Framework
+python-telegram-bot==20.7
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Database (SQLite is included in Python standard library)
+# No additional package needed for sqlite3
+
+# JSON handling (included in Python standard library)
+# No additional package needed
+
+# Logging and utilities
+python-dateutil==2.8.2
